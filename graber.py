@@ -4,11 +4,11 @@ import getpass
 import os
 
 username = input('请输入用户名')
-password = getpass.getpass('请输入密码(代码自动隐藏，直接回车完成输入)')
+password = getpass.getpass('请输入密码')
 gap = float(input('请输入抢课间隔(单位s)'))
 
 '''
-或者直接在这里输入用户名和密码，然后注释上边的输入代码，去掉这里的注释符号
+或者直接在这里输入用户名和密码
 username = '这里输入用户名'
 password = '这里输入密码'
 gap = float('这里输入抢课间隔(单位s)')
@@ -19,6 +19,7 @@ path = os.getcwd()
 
 def grab():
     #模拟登录
+    #browser = webdriver.Chrome(executable_path=os.path.join(path,'chromedriver.exe'))
     browser = webdriver.Firefox(executable_path=os.path.join(path,'geckodriver.exe'))
     browser.get("http://xk.nju.edu.cn/xsxkapp/sys/xsxkapp/*default/index.do")
     browser.find_element_by_id("username").send_keys(username)
@@ -44,7 +45,6 @@ def grab():
             time.sleep(1)
             browser.find_element_by_css_selector(".cv-sure").click()
         time.sleep(gap)
-
     browser.quit()
 
 #发现网络异常自动重新载入程序
