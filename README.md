@@ -1,7 +1,14 @@
 # 南京大学新版教务系统抢课程序
 
+
+
+
 ## 工具依赖
-### 脚本中使用了selenium,可以使用pip进行安装
+
+
+### 请自行配置python,pip等环境
+
+### 代码中使用了selenium,可以使用pip进行安装
 ```
 pip install selenium
 ```
