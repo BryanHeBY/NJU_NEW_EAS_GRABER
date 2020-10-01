@@ -9,4 +9,6 @@ pip install selenium
 
 1.[Firefox](https://github.com/mozilla/geckodriver)
 
+下载之后解压，将可执行文件复制到与graber.py文件同一文件夹下，并改名为geckodriver.exe
+
 2.[chrome](http://chromedriver.storage.googleapis.com/index.html)
