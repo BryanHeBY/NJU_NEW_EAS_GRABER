@@ -20,7 +20,7 @@ pip install selenium
 
 2.[chrome](http://chromedriver.storage.googleapis.com/index.html)
 
-ps. 未经过测试，不建议使用，否则请自行修改代码细节
+同上，复制并更名
 
 ## 使用说明
 
