@@ -5,10 +5,22 @@
 ```
 pip install selenium
 ```
-### 同时还需要浏览器驱动，请根据自身浏览器类型和系统下载
+### 同时还需要浏览器驱动，请根据自身浏览器类型和系统下载(建议使用Firefox)
 
 1.[Firefox](https://github.com/mozilla/geckodriver)
 
 下载之后解压，将可执行文件复制到与graber.py文件同一文件夹下，并改名为geckodriver.exe
 
 2.[chrome](http://chromedriver.storage.googleapis.com/index.html)
+
+ps. 未经过测试，不建议使用，否则请自行修改代码细节
+
+## 使用说明
+
+1.请先登录南大新版教务选课系统，收藏自己想要抢的课程，程序将进入收藏界面自动抢课
+
+2.进入程序(命令: python {graber.py路径})，开始自动抢课
+
+3.为避免重复输入账号密码，请进入源代码一次性输入
+
+4.抢课间隔时间是指刷新可选课程的间隔时间
