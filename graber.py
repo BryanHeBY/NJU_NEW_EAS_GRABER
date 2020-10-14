@@ -34,7 +34,7 @@ def grab():
         browser.implicitly_wait(3)
         browser.find_element_by_css_selector("#cvPageHeadTab > li:nth-child(1) > a:nth-child(1)").click()
         browser.implicitly_wait(3)
-        browser.find_element_by_css_selector("#cvPageHeadTab > li:nth-child(8) > a:nth-child(1)").click()
+        browser.find_element_by_xpath('//a[text()="收藏"]').click()
         browser.implicitly_wait(3)
         for each in browser.find_elements_by_css_selector(
                 'tr.course-tr> td:nth-child(8) > a:nth-child(2)[data-isfull=""]'):
