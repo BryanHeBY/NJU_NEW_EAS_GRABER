@@ -1,0 +1,37 @@
+## **注：该版本为旧版，可能不可使用**
+
+# 南京大学新版教务系统抢课程序
+
+
+
+
+## 工具依赖
+
+
+### 请自行配置python,pip等环境
+
+### 代码中使用了selenium,可以使用pip进行安装
+```
+pip install selenium
+```
+### 同时还需要浏览器驱动，请根据自身浏览器类型和系统下载(建议使用Firefox)
+
+1.[Firefox](https://github.com/mozilla/geckodriver)
+
+下载之后解压，将可执行文件复制到与graber.py文件同一文件夹下，并改名为geckodriver.exe
+
+2.[chrome](http://chromedriver.storage.googleapis.com/index.html)
+
+同上，复制并更名
+
+## 使用说明
+
+1.请先登录南大新版教务选课系统，收藏自己想要抢的课程，程序将进入收藏界面自动抢课
+
+2.进入程序(命令: python {graber.py路径})，开始自动抢课
+
+3.为避免重复输入账号密码，请进入源代码一次性输入
+
+4.抢课间隔时间是指刷新可选课程的间隔时间
+
+5.增加了Irjia同学的部分建议
