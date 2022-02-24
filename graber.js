@@ -1,4 +1,4 @@
-global_time_gap = 10 // ms 抢课间隔
+global_time_gap = 1000 // ms 抢课间隔
 
 let global_studentCode = JSON.parse(sessionStorage.studentInfo).code;
 let global_electiveBatch = "";
@@ -13,7 +13,7 @@ function get_electiveBatchCode(studentCode=global_studentCode) { //获取选课�
     global_electiveBatch = electiveBatch_list[0].code; //默认为第一个轮次
 }
 
-function get_favorate_and_grab(grab_func, studentCode=global_studentCode, electiveBatchCode=global_electiveBatch) { //获取收藏列表
+function get_favorite_and_grab(grab_func, studentCode=global_studentCode, electiveBatchCode=global_electiveBatch) { //获取收藏列表
     $.ajax(
         {
             url : "https://xk.nju.edu.cn/xsxkapp/sys/xsxkapp/elective/queryfavorite.do",
@@ -37,8 +37,8 @@ function get_favorate_and_grab(grab_func, studentCode=global_studentCode, electi
     );
 }
 
-function print_favorate() { // 打印收藏列表，获取课程编码，轮次，courseKind, teachingClassType，等信息
-    get_favorate_and_grab((course_list) => {
+function print_favorite() { // 打印收藏列表，获取课程编码，轮次，courseKind, teachingClassType，等信息
+    get_favorite_and_grab((course_list) => {
         console.log(course_list)
     });
 }
@@ -109,9 +109,9 @@ function grab_from_list_loop(course_list, time_gap) { //从列表循环抢课
     grab_func();
 }
 
-function grab_favorate(time_gap=global_time_gap) { //在收藏列表中循环抢课，参数为抢课间隔时间，只需在控制台调用该函数即可抢课
+function grab_favorite(time_gap=global_time_gap) { //在收藏列表中循环抢课，参数为抢课间隔时间，只需在控制台调用该函数即可抢课
     get_electiveBatchCode();
-    get_favorate_and_grab((course_list) => {
+    get_favorite_and_grab((course_list) => {
         grab_from_list_loop(course_list, time_gap)
     });
 }
